@@ -118,7 +118,7 @@ class Libro extends Item{
     
     const movie={nombrePeli:nombre.value,duracion:duracion.value,sipnosis:sipnosis.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value}
     console.log(movie)
-    fetch('http://localhost:3003/api/v1/peliculas/savePeliculas',{
+    fetch('https://peliculas-alvaro.herokuapp.com/api/v1/peliculas/savePeliculas',{
         method:"POST",
         headers:{"Content-Type": "application/json",
     },
@@ -147,7 +147,7 @@ function agregarSeries(){
 
     const serie={nombreSerie:nombre.value,lanzamiento:año.value,genero:genero.value,imagen:imagen.value,sipnosis:sipnosis.value,capitulos:capitulos.value}
     console.log(serie)
-    fetch('http://localhost:3003/api/v1/series/saveSerie',{
+    fetch('https://peliculas-alvaro.herokuapp.com/api/v1/series/saveSerie',{
         method:"POST",
         headers:{"Content-Type": "application/json",
     },
@@ -168,7 +168,7 @@ function agregarLibros(){
     let autor=document.getElementById("autor_libro")
     const libro={nombreLibro:nombre.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value,autor:autor.value}
     console.log(libro)
-    fetch('http://localhost:3003/api/v1/books/saveBooks',{
+    fetch('https://peliculas-alvaro.herokuapp.com/api/v1/books/saveBooks',{
         method:"POST",
         headers:{"Content-Type": "application/json",
     },
@@ -187,7 +187,7 @@ function agregarLibros(){
 //funcion crear peliculas
  const crearPelicula=()=>{
     const peliculas=[];
-    fetch("http://localhost:3003/api/v1/peliculas/getPeliculas")
+    fetch("https://peliculas-alvaro.herokuapp.com/api/v1/peliculas/getPeliculas")
     .then(response => response.json())
     .then(data => {
         for(peli of data){
@@ -236,7 +236,7 @@ function agregarLibros(){
  //funcion para crear las series 
  const crearSerie=()=>{
     const series=[];
-    fetch("http://localhost:3003/api/v1/series/getSeries")
+    fetch("https://peliculas-alvaro.herokuapp.com/api/v1/series/getSeries")
     .then(response=>response.json())
     .then(data=>{
         for(let serie of data){
@@ -267,7 +267,7 @@ function agregarLibros(){
  //funcion para crear los libros
  const crearLibro=()=>{
     const libros=[];
-    fetch("http://localhost:3003/api/v1/books/getBooks")
+    fetch("https://peliculas-alvaro.herokuapp.com/api/v1/books/getBooks")
     .then(response => response.json())
     .then(data => {
         for(let libro of data){
