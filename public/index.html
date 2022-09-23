@@ -10,24 +10,70 @@
 <body>
     
     <header >
-        <nav class="nav">   
+        <nav class="nav" id="nav">   
             <ul class="nav-ul">
-                <a href="../public/index.html"><div class="nav-ul-li"><ion-icon name="earth-outline" class="logo-menu"></ion-icon>Inicio</div></a>
                 <a href="../public/public/peliculas.html"><div class="nav-ul-li" ><ion-icon name="videocam-outline" class="logo-menu"></ion-icon></i>Peliculas</div></a>
                 <a href="../public/public/series.html"><div class="nav-ul-li" ><ion-icon name="tv-outline" class="logo-menu"></ion-icon>Series</div></a>
                 <a href="../public/public/libros.html"><div class="nav-ul-li" ><ion-icon name="library-outline" class="logo-menu"></ion-icon>Libros</div></a>
-                <a ><div class="nav-ul-li" ><ion-icon name="search-outline" class="logo-menu"></ion-icon><input id="input_searcher" class="nav-buscar" type="text"><div id="search_container" class="container_search"></div></div></a>
+                <a id="search" onclick="buscador()" ><div class="nav-ul-li" ><ion-icon name="search-outline" class="logo-menu"></ion-icon>Buscar</div></a>
             </ul>
-            <div class="nav-logo"><img src="../public/public/media/Entertainment (130 × 80 px).svg" alt="">  
+            
+            
+            <div class="nav-responsive">
+                <a href="../public/public/peliculas.html"><ion-icon name="videocam-outline" class="logo-menu"></ion-icon></i></a>
+                <a href="../public/public/series.html"><ion-icon name="tv-outline" class="logo-menu"></ion-icon></a>
+                <a href="../public/public/libros.html"><ion-icon name="library-outline" class="logo-menu"></ion-icon></a>
+                <a id="search" onclick="buscador()"><ion-icon name="search-outline" class="logo-menu"></ion-icon></a>
+                
 
             </div>
+            <div class="nav-logo"><img src="../public/public/media/Entertainment (130 × 80 px).svg" alt=""></div>
+            <div class="search-responsive"id="search-responsive">
+                <input id="input_searcher"  placeholder="busca tu pelicula..."class="nav-buscar" type="text">
+                
+                
+            </div>
         </nav>
+        <div id="search_container" class="container_search"></div>
         
     </header>
     <section>
         <div class="show-movies" >
             <div class="movies-title"><h1>Peliculas</h1></div>
            <!--  items -->
+            <div class="container-item">
+                <img class="img-item " src="https://play-lh.googleusercontent.com/6JZiNP78042HM0cOyGN5q3SEg8xnGrgds3I86YOW0zmOHpaT4OsJb1IhN_F7LhXf0rfAZANEwhLY6wcTLg=s256-rw" alt="">
+                <div class="description-item ">
+                    <h3>Nombre:</h3>
+                    <h4>Sipnosis:</h4>
+                    <h4>Año:</h4>
+                    <h4>genero:</h4>
+                    <h4>Duracion:</h4>
+                    
+                </div>
+            </div>
+            <div class="container-item">
+                <img class="img-item " src="https://play-lh.googleusercontent.com/6JZiNP78042HM0cOyGN5q3SEg8xnGrgds3I86YOW0zmOHpaT4OsJb1IhN_F7LhXf0rfAZANEwhLY6wcTLg=s256-rw" alt="">
+                <div class="description-item ">
+                    <h3>Nombre:</h3>
+                    <h4>Sipnosis:</h4>
+                    <h4>Año:</h4>
+                    <h4>genero:</h4>
+                    <h4>Duracion:</h4>
+                    
+                </div>
+            </div>
+            <div class="container-item">
+                <img class="img-item " src="https://play-lh.googleusercontent.com/6JZiNP78042HM0cOyGN5q3SEg8xnGrgds3I86YOW0zmOHpaT4OsJb1IhN_F7LhXf0rfAZANEwhLY6wcTLg=s256-rw" alt="">
+                <div class="description-item ">
+                    <h3>Nombre:</h3>
+                    <h4>Sipnosis:</h4>
+                    <h4>Año:</h4>
+                    <h4>genero:</h4>
+                    <h4>Duracion:</h4>
+                    
+                </div>
+            </div>
             <div class="container-item">
                 <img class="img-item " src="https://play-lh.googleusercontent.com/6JZiNP78042HM0cOyGN5q3SEg8xnGrgds3I86YOW0zmOHpaT4OsJb1IhN_F7LhXf0rfAZANEwhLY6wcTLg=s256-rw" alt="">
                 <div class="description-item ">
@@ -76,20 +122,28 @@
     </section>
     <footer class="footer ">
         <div class="logo-footer"><img src="../public/public/media/Entertainment (130 × 80 px).svg" alt=""></div>
-        <ul class="ul-developers">
+        <div class="info-footer">
+            <h1>Redes</h1>
+            <h3>-facebook</h3>
+            <h3>-Instagram</h3>
+            <h3>-Twitter</h3>
             
-            <li><h1>jheison rua</h1></li>
-            <li><h1>juan pablo ramirez</h1></li>
-            <li><h1>juan camilo ojeda</h1></li>
-            <li><h1>samuel mejia</h1></li>
-            <li><h1>juan francisco toro</h1></li>
 
-        </ul>
+        </div>
+        <div class="info-footer-dos">
+            <h2>Deja tu comentario</h2>
+            <input type="email" placeholder="E-mail...">
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+            <button>Enviar</button>
+        </div>
+
     </footer>
-    <script src="/js/app.js"></script>
+    <script src="./js/app.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./js/buscador.js"></script>
+    <script src="./js/animaciones.js"></script>
     
 </body>
 </html>
